@@ -1,0 +1,44 @@
+.player {
+  letter-spacing: -0.4px;
+  font-weight: 400;
+  font-size: 25px;
+}
+#game-board {
+  width: 680px;
+  height: 680px;
+  background-color: rgba(60, 32, 19, 0.869);
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  border: 20px solid rgba(60, 32, 19, 0.358);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.item {
+  border: 1px solid #111;
+  position: relative;
+}
+.check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.check + label {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  transform: translateX(5%) translateY(5%);
+  z-index: 10;
+}
+.check + label:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.check:checked + label {
+  display: block;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
